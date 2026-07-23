@@ -378,25 +378,20 @@ footer {
 
 @media(max-width:900px){
 
-.features,
-.route-grid {
+    .features,
+    .route-grid {
+        grid-template-columns:1fr;
+    }
 
-grid-template-columns:1fr;
+    .hero h1 {
+        font-size:40px;
+    }
 
-}
+    nav {
+        display:none;
+    }
 
-
-.hero h1 {
-
-font-size:40px;
-
-}
-
-nav {
-
-display:none;
-
-}
+} 
 
   .booking {
 
