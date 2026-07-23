@@ -27,7 +27,6 @@ header {
 
 
 .logo {
-    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -69,8 +68,12 @@ nav a {
 
 .hero h1 {
 
-    font-size:60px;
-    line-height:1.1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+line-height:1.1;
 
 }
 
