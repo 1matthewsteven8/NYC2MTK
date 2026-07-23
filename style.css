@@ -381,4 +381,100 @@ display:none;
 
 }
 
+  .booking {
+
+min-height:100vh;
+
+background:#f7f7f7;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:120px 20px;
+
+}
+
+
+.booking h1 {
+
+font-family:'Playfair Display', serif;
+
+font-size:55px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.booking p {
+
+font-size:20px;
+
+color:#555;
+
+}
+
+
+
+.payment-box {
+
+margin-top:50px;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.1);
+
+}
+
+
+
+.payment-box h2 {
+
+margin-bottom:15px;
+
+}
+
+
+
+.payment-options {
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+margin-top:30px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.payment-options div {
+
+background:#fafafa;
+
+padding:20px 30px;
+
+border-radius:12px;
+
+font-size:18px;
+
+font-weight:bold;
+
+}  
+
 }
