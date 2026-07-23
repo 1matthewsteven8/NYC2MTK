@@ -193,12 +193,65 @@ button {
 
 .cta {
 
-    background:#111;
+    position:relative;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.65)
+    ),
+    url("images/night-drive.jpg");
+
+    background-size:cover;
+    background-position:center;
+
     color:white;
+
     text-align:center;
-    padding:100px 20px;
+
+    padding:120px 20px;
 
 }
+
+
+.cta-content {
+
+    position:relative;
+    z-index:2;
+
+}
+
+
+.gold-line {
+
+    width:60px;
+    height:3px;
+    background:#c9a227;
+
+    margin:0 auto 30px;
+
+}
+
+
+.cta h2 {
+
+    font-family:'Playfair Display', serif;
+
+    font-size:52px;
+
+    margin-bottom:20px;
+
+}
+
+
+.cta p {
+
+    font-size:20px;
+
+    margin-bottom:40px;
+
+}
+
 
 
 .cta h2 {
@@ -217,6 +270,14 @@ footer {
 
 }
 
+
+.cta button {
+
+    background:#c9a227;
+    color:white;
+    font-weight:bold;
+
+}
 
 
 @media(max-width:900px){
