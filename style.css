@@ -319,6 +319,148 @@ button:hover,
     color: #555;
 }
 
+/* ---- Booking Form ---- */
+
+.booking-form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+}
+
+.form-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.1);
+}
+
+.form-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.trip-type {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.radio-pill {
+    position: relative;
+}
+
+.radio-pill input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.radio-pill span {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 30px;
+    background: #fafafa;
+    border: 2px solid #eee;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #555;
+    transition: .3s;
+}
+
+.radio-pill input:checked + span {
+    background: #c9a227;
+    border-color: #c9a227;
+    color: white;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field.span-2 {
+    grid-column: span 2;
+}
+
+.form-field label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 14px 16px;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    background: #fafafa;
+    color: #111;
+    transition: .3s;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #c9a227;
+    background: white;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.form-disclaimer {
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.confirmation-box {
+    margin-top: 50px;
+    background: white;
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.1);
+    text-align: center;
+}
+
+.confirmation-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #c9a227;
+}
+
+.confirmation-box p {
+    margin-bottom: 30px;
+}
+
 .payment-box {
     margin-top: 50px;
     background: white;
@@ -385,6 +527,18 @@ footer {
     .payment-options {
         flex-direction: column;
         align-items: center;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field.span-2 {
+        grid-column: span 1;
+    }
+
+    .trip-type {
+        flex-direction: column;
     }
 
 }
