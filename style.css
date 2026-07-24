@@ -293,36 +293,64 @@ button:hover,
    BOOKING PAGE
 ========================================== */
 
-.booking {
-    min-height: 100vh;
-    background: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Keep the nav visible while scrolling the booking page,
+   with a solid backing so it stays legible over any content. */
+body.page-book header {
+    position: fixed;
+    background: rgba(15,15,15,.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+    padding: 22px 8%;
+}
+
+.booking-hero {
+    position: relative;
+    padding: 150px 20px 90px;
     text-align: center;
-    padding: 140px 20px 80px;
+    color: white;
+    background:
+        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+        url("images/suburban.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-.booking-content {
+.booking-hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 800px;
-    width: 100%;
+    margin: 0 auto;
 }
 
-.booking h1 {
+.booking-hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 56px;
     margin-bottom: 20px;
 }
 
-.booking p {
+.booking-hero p {
     font-size: 20px;
-    color: #555;
+    color: #eee;
+}
+
+.booking {
+    background: #eeece5;
+    display: flex;
+    justify-content: center;
+    padding: 70px 20px 80px;
+}
+
+.booking-content {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
 }
 
 /* ---- Booking Form ---- */
 
 .booking-form {
-    margin-top: 50px;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -330,10 +358,11 @@ button:hover,
 }
 
 .form-box {
-    background: white;
+    background: #fdfcf9;
+    border: 1px solid #e7e4db;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
 }
 
 .form-section-title {
@@ -443,10 +472,11 @@ button:hover,
 
 .confirmation-box {
     margin-top: 50px;
-    background: white;
+    background: #fdfcf9;
+    border: 1px solid #e7e4db;
     padding: 60px 40px;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
     text-align: center;
 }
 
@@ -463,10 +493,11 @@ button:hover,
 
 .payment-box {
     margin-top: 50px;
-    background: white;
+    background: #fdfcf9;
+    border: 1px solid #e7e4db;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
 }
 
 .payment-box h2 {
@@ -482,7 +513,7 @@ button:hover,
 }
 
 .payment-options div {
-    background: #fafafa;
+    background: #f3f1eb;
     padding: 20px 30px;
     border-radius: 12px;
     font-weight: bold;
@@ -512,7 +543,7 @@ footer {
     }
 
     .hero h1,
-    .booking h1,
+    .booking-hero h1,
     .cta h2,
     .routes h2,
     .section-title h2 {
@@ -539,6 +570,14 @@ footer {
 
     .trip-type {
         flex-direction: column;
+    }
+
+    body.page-book header {
+        padding: 18px 6%;
+    }
+
+    .booking-hero {
+        padding: 120px 20px 70px;
     }
 
 }
