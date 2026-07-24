@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Manhattan to Montauk</title>
+    <link rel="icon" type="image/png" href="images/favicon-32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        MANHATTAN TO MONTAUK
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="book.html">Book</a>
+        <a href="#">Fleet</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+
+<section class="page-hero contact-hero">
+    <div class="page-hero-content">
+        <h1>Get In Touch</h1>
+        <p>
+            Questions about a ride, a special request, or just want
+            to talk to a real person? We're here.
+        </p>
+    </div>
+</section>
+
+
+<section class="features">
+
+    <div class="feature-grid cols-3">
+
+        <div class="feature-card">
+            <div class="icon">📞</div>
+            <h3>Call or Text</h3>
+            <p>
+                <a href="tel:+16315550142" class="contact-link">(631) 555-0142</a>
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">✉️</div>
+            <h3>Email</h3>
+            <p>
+                <a href="mailto:info@manhattantomontauk.com" class="contact-link">info@manhattantomontauk.com</a>
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">🗺️</div>
+            <h3>Service Area</h3>
+            <p>
+                Manhattan, Brooklyn, Queens, Nassau &amp; Suffolk County,
+                the Hamptons, and Montauk.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="booking">
+
+<div class="booking-content">
+
+<form class="booking-form" id="contact-form">
+
+<div class="form-box">
+
+<h2 class="form-section-title">Send Us a Message</h2>
+
+<div class="form-grid">
+
+<div class="form-field">
+<label for="contact-name">Full Name</label>
+<input type="text" id="contact-name" name="name" placeholder="Your name" required>
+</div>
+
+<div class="form-field">
+<label for="contact-phone">Phone Number</label>
+<input type="tel" id="contact-phone" name="phone" placeholder="(555) 555-5555">
+</div>
+
+<div class="form-field span-2">
+<label for="contact-email">Email Address</label>
+<input type="email" id="contact-email" name="email" placeholder="you@example.com" required>
+</div>
+
+<div class="form-field span-2">
+<label for="contact-message">Message</label>
+<textarea id="contact-message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+</div>
+
+</div>
+
+</div>
+
+<button type="submit" class="button submit-button">
+Send Message
+</button>
+
+<p class="form-disclaimer">
+This form does not yet send live messages. For now, please reach out
+by phone or email above and we'll get back to you directly.
+</p>
+
+</form>
+
+
+<div class="confirmation-box" id="contact-confirmation-box" style="display:none;">
+
+<h2>Message Received</h2>
+
+<p>
+Thanks for reaching out! We'll get back to you as soon as we can.
+</p>
+
+<button type="button" class="button" id="contact-new-message-button">
+Send Another Message
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Manhattan to Montauk LLC
+</p>
+
+<p>
+NYC2MTK.com
+</p>
+
+</footer>
+
+
+<script>
+
+const contactForm = document.getElementById('contact-form');
+const contactConfirmationBox = document.getElementById('contact-confirmation-box');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    contactForm.style.display = 'none';
+    contactConfirmationBox.style.display = 'block';
+});
+
+document.getElementById('contact-new-message-button').addEventListener('click', () => {
+    contactForm.reset();
+    contactConfirmationBox.style.display = 'none';
+    contactForm.style.display = 'flex';
+});
+
+</script>
+
+</body>
+</html>
