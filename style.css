@@ -20,14 +20,18 @@ body {
 ========================================== */
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
-    padding: 30px 8%;
+    padding: 22px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    background: rgba(15,15,15,.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
 }
 
 .logo {
@@ -143,7 +147,7 @@ button:hover,
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 60px;
     line-height: 1.1;
     max-width: 1500px;
@@ -160,8 +164,8 @@ button:hover,
 ========================================== */
 
 .features {
-    background: white;
-    padding: 90px 8%;
+    background: #faf8f3;
+    padding: 100px 8%;
     text-align: center;
 }
 
@@ -170,8 +174,29 @@ button:hover,
     margin: 0 auto 60px;
 }
 
+.eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c9a227;
+    margin-bottom: 18px;
+}
+
+.eyebrow span {
+    display: block;
+    width: 36px;
+    height: 2px;
+    background: #c9a227;
+}
+
 .section-title h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 42px;
     margin-bottom: 15px;
 }
@@ -188,24 +213,37 @@ button:hover,
 }
 
 .feature-card {
-    background: #fafafa;
-    padding: 35px 25px;
-    border-radius: 15px;
-    transition: .3s;
+    position: relative;
+    background: white;
+    padding: 45px 30px 35px;
+    border-radius: 16px;
+    border: 1px solid #eee8da;
+    box-shadow: 0 10px 25px rgba(0,0,0,.04);
+    transition: .35s;
 }
 
 .feature-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,.09);
+    border-color: #c9a227;
 }
 
 .icon {
-    font-size: 42px;
-    margin-bottom: 20px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 22px;
+    font-size: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f5e6b8, #c9a227);
+    box-shadow: 0 8px 18px rgba(201,162,39,.3);
 }
 
 .feature-card h3 {
-    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 12px;
 }
 
 .feature-card p {
@@ -218,34 +256,81 @@ button:hover,
 ========================================== */
 
 .routes {
-    background: #f5f5f5;
-    padding: 80px 8%;
+    background: #efece4;
+    padding: 100px 8%;
     text-align: center;
-}
-
-.routes h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
 }
 
 .route-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 25px;
-    margin-top: 40px;
+    margin-top: 10px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.route-grid div {
+.route-card {
+    position: relative;
     background: white;
-    padding: 40px;
-    border-radius: 15px;
-    font-size: 22px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    padding: 35px 40px;
+    border-radius: 16px;
+    border: 1px solid #e6e2d5;
+    border-left: 4px solid #c9a227;
+    box-shadow: 0 10px 25px rgba(0,0,0,.05);
+    text-align: left;
     transition: .3s;
 }
 
-.route-grid div:hover {
+.route-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 18px 35px rgba(0,0,0,.1);
+}
+
+.route-tag {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #c9a227;
+    background: rgba(201,162,39,.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+.route-path {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+.route-arrow {
+    font-family: 'Montserrat', sans-serif;
+    color: #c9a227;
+    font-size: 20px;
+}
+
+.route-link {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+}
+
+.route-link:hover {
+    border-bottom-color: #c9a227;
+    color: #c9a227;
 }
 
 
@@ -278,7 +363,7 @@ button:hover,
 }
 
 .cta h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 52px;
     margin-bottom: 20px;
 }
@@ -293,38 +378,200 @@ button:hover,
    BOOKING PAGE
 ========================================== */
 
+.booking-hero {
+    position: relative;
+    padding: 150px 20px 90px;
+    text-align: center;
+    color: white;
+    background:
+        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+        url("images/fleet1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.booking-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.booking-hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.booking-hero p {
+    font-size: 20px;
+    color: #eee;
+}
+
 .booking {
-    min-height: 100vh;
-    background: #f7f7f7;
+    background: #eeece5;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 140px 20px 80px;
+    padding: 70px 20px 80px;
 }
 
 .booking-content {
     max-width: 800px;
     width: 100%;
+    text-align: center;
 }
 
-.booking h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 56px;
-    margin-bottom: 20px;
+/* ---- Booking Form ---- */
+
+.booking-form {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
 }
 
-.booking p {
-    font-size: 20px;
+.form-box {
+    background: #fdfcf9;
+    border: 1px solid #e7e4db;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+.form-section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.trip-type {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.radio-pill {
+    position: relative;
+}
+
+.radio-pill input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.radio-pill span {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 30px;
+    background: #fafafa;
+    border: 2px solid #eee;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
     color: #555;
+    transition: .3s;
+}
+
+.radio-pill input:checked + span {
+    background: #c9a227;
+    border-color: #c9a227;
+    color: white;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field.span-2 {
+    grid-column: span 2;
+}
+
+.form-field label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 14px 16px;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    background: #fafafa;
+    color: #111;
+    transition: .3s;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #c9a227;
+    background: white;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.form-disclaimer {
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.confirmation-box {
+    margin-top: 50px;
+    background: #fdfcf9;
+    border: 1px solid #e7e4db;
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    text-align: center;
+}
+
+.confirmation-box h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #c9a227;
+}
+
+.confirmation-box p {
+    margin-bottom: 30px;
 }
 
 .payment-box {
     margin-top: 50px;
-    background: white;
+    background: #fdfcf9;
+    border: 1px solid #e7e4db;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
 }
 
 .payment-box h2 {
@@ -340,7 +587,7 @@ button:hover,
 }
 
 .payment-options div {
-    background: #fafafa;
+    background: #f3f1eb;
     padding: 20px 30px;
     border-radius: 12px;
     font-weight: bold;
@@ -370,7 +617,7 @@ footer {
     }
 
     .hero h1,
-    .booking h1,
+    .booking-hero h1,
     .cta h2,
     .routes h2,
     .section-title h2 {
@@ -382,9 +629,34 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .route-path {
+        font-size: 20px;
+        flex-wrap: wrap;
+    }
+
     .payment-options {
         flex-direction: column;
         align-items: center;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field.span-2 {
+        grid-column: span 1;
+    }
+
+    .trip-type {
+        flex-direction: column;
+    }
+
+    header {
+        padding: 18px 6%;
+    }
+
+    .booking-hero {
+        padding: 120px 20px 70px;
     }
 
 }
