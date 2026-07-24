@@ -20,14 +20,18 @@ body {
 ========================================== */
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
-    padding: 30px 8%;
+    padding: 22px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    background: rgba(15,15,15,.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
 }
 
 .logo {
@@ -143,7 +147,7 @@ button:hover,
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 60px;
     line-height: 1.1;
     max-width: 1500px;
@@ -192,7 +196,7 @@ button:hover,
 }
 
 .section-title h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 42px;
     margin-bottom: 15px;
 }
@@ -302,7 +306,7 @@ button:hover,
     display: flex;
     align-items: center;
     gap: 14px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 24px;
     margin-bottom: 22px;
 }
@@ -359,7 +363,7 @@ button:hover,
 }
 
 .cta h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 52px;
     margin-bottom: 20px;
 }
@@ -374,17 +378,6 @@ button:hover,
    BOOKING PAGE
 ========================================== */
 
-/* Keep the nav visible while scrolling the booking page,
-   with a solid backing so it stays legible over any content. */
-body.page-book header {
-    position: fixed;
-    background: rgba(15,15,15,.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 4px 20px rgba(0,0,0,.15);
-    padding: 22px 8%;
-}
-
 .booking-hero {
     position: relative;
     padding: 150px 20px 90px;
@@ -392,7 +385,7 @@ body.page-book header {
     color: white;
     background:
         linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-        url("images/fleet1.jpg");
+        url("images/suburban.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -405,7 +398,7 @@ body.page-book header {
 }
 
 .booking-hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 56px;
     margin-bottom: 20px;
 }
@@ -447,7 +440,7 @@ body.page-book header {
 }
 
 .form-section-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 26px;
     margin-bottom: 25px;
 }
@@ -562,7 +555,7 @@ body.page-book header {
 }
 
 .confirmation-box h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 34px;
     margin-bottom: 20px;
     color: #c9a227;
@@ -658,7 +651,7 @@ footer {
         flex-direction: column;
     }
 
-    body.page-book header {
+    header {
         padding: 18px 6%;
     }
 
