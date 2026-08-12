@@ -125,7 +125,7 @@ button:hover,
 }
 
 .slide:nth-child(2) {
-    background-image: url("images/msg.jpg");
+    background-image: url("images/cityscape.jpg");
 }
 
 .slide:nth-child(3) {
@@ -134,10 +134,6 @@ button:hover,
 
 .slide:nth-child(4) {
     background-image: url("images/montauk.jpg");
-}
-
-.slide:nth-child(5) {
-    background-image: url("images/cityscape.jpg");
 }
 
 .overlay {
