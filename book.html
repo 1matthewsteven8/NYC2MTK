@@ -28,7 +28,7 @@
 MANHATTAN TO MONTAUK
 </div>
 
-<nav>
+<nav id="site-nav">
 
 <a href="index.html">Home</a>
 <a href="book.html">Book</a>
@@ -38,7 +38,15 @@ MANHATTAN TO MONTAUK
 
 </nav>
 
+<button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
 </header>
+
+<div class="nav-overlay" id="nav-overlay"></div>
 
 
 <section class="booking-hero">
@@ -288,6 +296,36 @@ document.getElementById('new-request-button').addEventListener('click', () => {
     form.style.display = 'flex';
 });
 
+</script>
+
+<script>
+const navToggle = document.getElementById('nav-toggle');
+const siteNav = document.getElementById('site-nav');
+const navOverlay = document.getElementById('nav-overlay');
+
+function closeNav() {
+    navToggle.classList.remove('open');
+    siteNav.classList.remove('open');
+    navOverlay.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+}
+
+function openNav() {
+    navToggle.classList.add('open');
+    siteNav.classList.add('open');
+    navOverlay.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+}
+
+navToggle.addEventListener('click', () => {
+    siteNav.classList.contains('open') ? closeNav() : openNav();
+});
+
+navOverlay.addEventListener('click', closeNav);
+
+siteNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeNav);
+});
 </script>
 
 
